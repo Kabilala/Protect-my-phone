@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect My Phone - Présentation Cybersécurité</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="accessibility-panel">
+        <button id="toggle-accessibility" aria-label="Options d'accessibilité">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-options">
+            <div>
+                <label for="font-size">Taille du texte:</label>
+                <button id="decrease-font" aria-label="Diminuer la taille du texte">A-</button>
+                <button id="increase-font" aria-label="Augmenter la taille du texte">A+</button>
+            </div>
+            <div>
+                <label for="contrast">Contraste:</label>
+                <button id="high-contrast" aria-label="Contraste élevé">Élevé</button>
+                <button id="normal-contrast" aria-label="Contraste normal">Normal</button>
+            </div>
+            <div>
+                <label for="language">Langue:</label>
+                <select id="language-selector">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+            <div>
+                <button id="read-aloud" aria-label="Lecture à voix haute">
+                    <i class="fas fa-volume-up"></i> Lecture à voix haute
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="language-content" data-lang="fr">
+        <div class="presentation">
+            <div class="controls">
+                <button class="btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="page-counter">1/15</div>
+                <button class="btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <!-- Slide 1: Title -->
+            <section class="slide title-slide">
+                <div class="content">
+                    <div class="logo-container">
+                        <img src="images/cyber_shield_logo.png" alt="Logo Protect My Phone" class="logo">
+                    </div>
+                    <h1>Protect My Phone</h1>
+                    <h2>Découvre la cybersécurité à travers ton smartphone</h2>
+                    <div class="author">Présenté par Kaouthar</div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Introduction -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Introduction</h2>
+                    <div class="text-content">
+                        <p>Pourquoi la cybersécurité est-elle importante pour les lycéennes ?</p>
+                        <div class="two-columns">
+                            <div class="column">
+                                <ul>
+                                    <li>Les jeunes femmes sont souvent ciblées par des cyberattaques spécifiques</li>
+                                    <li>92% des lycéens possèdent un smartphone et l'utilisent quotidiennement</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul>
+                                    <li>Les données personnelles sont particulièrement vulnérables sur les appareils mobiles</li>
+                                    <li>Sensibiliser tôt permet de développer de bonnes pratiques numériques pour l'avenir</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="statistics">
+                            <div class="stat">
+                                <span class="stat-number">67%</span>
+                                <span class="stat-description">des adolescents ont déjà été confrontés à une forme de cybermenace</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">83%</span>
+                                <span class="stat-description">des téléphones contiennent au moins une application à risque</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Objectifs de l'application -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Objectifs de l'application</h2>
+                    <div class="text-content objectives">
+                        <div class="objective">
+                            <i class="fas fa-eye"></i>
+                            <h3>Sensibiliser</h3>
+                            <p>Informer sur les risques numériques</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-search"></i>
+                            <h3>Analyser</h3>
+                            <p>Examiner les vulnérabilités du smartphone</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Détecter</h3>
+                            <p>Identifier les menaces potentielles</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Apprendre</h3>
+                            <p>Acquérir les bonnes pratiques de sécurité</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-bell"></i>
+                            <h3>Alerter</h3>
+                            <p>Prévenir en cas de comportement suspect</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Fonctionnalités - Dashboard -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Fonctionnalités : Tableau de bord</h2>
+                    <div class="app-showcase">
+                        <div class="app-description">
+                            <ul>
+                                <li><strong>Score de sécurité</strong> : Évaluation globale de la sécurité du téléphone</li>
+                                <li><strong>Analyse rapide</strong> : Vérification des risques en un seul clic</li>
+                                <li><strong>Récapitulatif des problèmes</strong> : Vue d'ensemble des points à améliorer</li>
+                                <li><strong>Recommandations personnalisées</strong> : Conseils adaptés à votre profil</li>
+                            </ul>
+                        </div>
+                        <div class="app-screenshot">
+                            <img src="images/security_dashboard.png" alt="Tableau de bord de l'application" class="screenshot">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Fonctionnalités - Analyse des applications -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Fonctionnalités : Analyse des applications</h2>
+                    <div class="app-showcase reverse">
+                        <div class="app-screenshot">
+                            <img src="images/app_scan_screen.png" alt="Écran d'analyse des applications" class="screenshot">
+                        </div>
+                        <div class="app-description">
+                            <ul>
+                                <li><strong>Scanner des applications</strong> : Analyse des permissions demandées</li>
+                                <li><strong>Détection des accès sensibles</strong> : Identification des apps qui accèdent à votre caméra, micro, localisation</li>
+                                <li><strong>Évaluation des risques</strong> : Classification des applications par niveau de danger</li>
+                                <li><strong>Recommandations</strong> : Suggestions d'alternatives plus sécurisées</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Fonctionnalités - Vérification des liens -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Fonctionnalités : Détection de phishing</h2>
+                    <div class="app-showcase">
+                        <div class="app-description">
+                            <ul>
+                                <li><strong>Analyse des SMS</strong> : Détection des messages frauduleux</li>
+                                <li><strong>Vérification des URL</strong> : Contrôle des liens avant d'y accéder</li>
+                                <li><strong>Alerte immédiate</strong> : Notification en cas de menace</li>
+                                <li><strong>Blocage automatique</strong> : Protection contre les tentatives de phishing</li>
+                            </ul>
+                        </div>
+                        <div class="app-screenshot">
+                            <img src="images/phishing_alert.png" alt="Alerte de phishing" class="screenshot">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Fonctionnalités - Sécurité WiFi -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Fonctionnalités : Sécurité WiFi</h2>
+                    <div class="app-showcase reverse">
+                        <div class="app-screenshot">
+                            <img src="images/wifi_security.png" alt="Alerte de sécurité WiFi" class="screenshot">
+                        </div>
+                        <div class="app-description">
+                            <ul>
+                                <li><strong>Détection des réseaux</strong> : Identification des WiFi non sécurisés</li>
+                                <li><strong>Alertes de connexion</strong> : Avertissement lors de la connexion à un réseau public</li>
+                                <li><strong>VPN intégré</strong> : Option de navigation sécurisée</li>
+                                <li><strong>Conseils de protection</strong> : Recommandations pour une connexion sans risque</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Étude de cas - Phishing -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Étude de cas : Le phishing bancaire</h2>
+                    <div class="case-study">
+                        <div class="case-description">
+                            <h3>Situation</h3>
+                            <p>Léa, 16 ans, reçoit un SMS qui semble provenir de sa banque, l'informant d'une activité suspecte sur son compte et lui demandant de cliquer sur un lien pour vérifier son identité.</p>
+                            
+                            <h3>Le risque</h3>
+                            <p>Il s'agit d'une tentative de phishing visant à voler ses identifiants bancaires. Le message imite parfaitement la communication de sa banque, mais le lien mène à un site frauduleux.</p>
+                            
+                            <h3>Protection avec Protect My Phone</h3>
+                            <p>L'application analyse automatiquement le SMS, détecte les signes de phishing (URL suspecte, demande d'informations sensibles) et alerte Léa avant qu'elle ne clique sur le lien.</p>
+                        </div>
+                        <div class="case-stats">
+                            <div class="circle-stat">
+                                <div class="circle-value">
+                                    <span class="big-number">47%</span>
+                                </div>
+                                <div class="circle-label">des adolescents ont déjà été victimes de phishing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Étude de cas - Applications intrusives -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Étude de cas : Applications intrusives</h2>
+                    <div class="case-study reverse">
+                        <div class="case-stats">
+                            <div class="circle-stat">
+                                <div class="circle-value">
+                                    <span class="big-number">78%</span>
+                                </div>
+                                <div class="circle-label">des applications gratuites collectent des données non nécessaires</div>
+                            </div>
+                        </div>
+                        <div class="case-description">
+                            <h3>Situation</h3>
+                            <p>Emma télécharge une nouvelle application de filtre photo qui demande l'accès à ses contacts, sa localisation, son micro et sa galerie photos.</p>
+                            
+                            <h3>Le risque</h3>
+                            <p>L'application collecte beaucoup plus de données que nécessaire pour fonctionner, créant un risque d'exploitation de sa vie privée.</p>
+                            
+                            <h3>Protection avec Protect My Phone</h3>
+                            <p>L'application détecte les permissions excessives demandées, alerte Emma et suggère des alternatives plus respectueuses de la vie privée ou des paramètres de permission restreints.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Quiz Interactif -->
+            <section class="slide quiz-slide">
+                <div class="content">
+                    <h2>Quiz : Testez vos connaissances</h2>
+                    <div class="quiz-container">
+                        <div class="quiz-intro active">
+                            <p>Êtes-vous prêt à tester vos connaissances en cybersécurité ?</p>
+                            <img src="images/quiz_screen.png" alt="Application Quiz" class="quiz-image">
+                            <button class="quiz-start-btn">Commencer le quiz</button>
+                        </div>
+                        
+                        <div class="quiz-question" id="question1">
+                            <p class="question-number">Question 1/3</p>
+                            <h3>Parmi ces indices, lequel n'est PAS un signe de phishing ?</h3>
+                            <div class="quiz-options">
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">A</span>
+                                    <span class="option-text">Message urgent demandant une action immédiate</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">B</span>
+                                    <span class="option-text">Fautes d'orthographe dans le message</span>
+                                </div>
+                                <div class="quiz-option" data-correct="true">
+                                    <span class="option-letter">C</span>
+                                    <span class="option-text">L'email est adressé à vous par votre prénom</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">D</span>
+                                    <span class="option-text">L'URL du lien est différente de l'entreprise citée</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question" id="question2">
+                            <p class="question-number">Question 2/3</p>
+                            <h3>Quelle est la méthode d'authentification la plus sécurisée ?</h3>
+                            <div class="quiz-options">
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">A</span>
+                                    <span class="option-text">Mot de passe simple facile à retenir</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">B</span>
+                                    <span class="option-text">Mot de passe complexe seul</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">C</span>
+                                    <span class="option-text">Code PIN à 4 chiffres</span>
+                                </div>
+                                <div class="quiz-option" data-correct="true">
+                                    <span class="option-letter">D</span>
+                                    <span class="option-text">Authentification à deux facteurs (mot de passe + code)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question" id="question3">
+                            <p class="question-number">Question 3/3</p>
+                            <h3>Que devriez-vous faire lorsque vous utilisez un WiFi public ?</h3>
+                            <div class="quiz-options">
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">A</span>
+                                    <span class="option-text">Se connecter à ses comptes bancaires</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">B</span>
+                                    <span class="option-text">Faire des achats en ligne</span>
+                                </div>
+                                <div class="quiz-option" data-correct="true">
+                                    <span class="option-letter">C</span>
+                                    <span class="option-text">Utiliser un VPN pour sécuriser votre connexion</span>
+                                </div>
+                                <div class="quiz-option" data-correct="false">
+                                    <span class="option-letter">D</span>
+                                    <span class="option-text">Partager le WiFi avec vos amis</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-result">
+                            <h3 class="result-title">Résultat du quiz</h3>
+                            <div class="result-score">
+                                <span class="score-value">0</span>/3
+                            </div>
+                            <p class="result-message"></p>
+                            <button class="quiz-restart-btn">Recommencer</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Bonnes pratiques -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Bonnes pratiques pour se protéger</h2>
+                    <div class="practices">
+                        <div class="practice">
+                            <i class="fas fa-lock"></i>
+                            <h3>Vérifier les paramètres de sécurité</h3>
+                            <p>Contrôler régulièrement les autorisations accordées aux applications</p>
+                        </div>
+                        <div class="practice">
+                            <i class="fas fa-sync"></i>
+                            <h3>Mettre à jour régulièrement</h3>
+                            <p>Installer les mises à jour du système et des applications dès qu'elles sont disponibles</p>
+                        </div>
+                        <div class="practice">
+                            <i class="fas fa-key"></i>
+                            <h3>Utiliser un gestionnaire de mots de passe</h3>
+                            <p>Sécuriser ses comptes avec des mots de passe uniques et complexes</p>
+                        </div>
+                        <div class="practice">
+                            <i class="fas fa-user-shield"></i>
+                            <h3>Activer l'authentification à deux facteurs</h3>
+                            <p>Ajouter une couche de sécurité supplémentaire pour l'accès aux comptes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 12: Plan d'action -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Plan d'action pour le développement</h2>
+                    <div class="timeline">
+                        <div class="phase">
+                            <h3>Phase 1</h3>
+                            <p>Création de la maquette interactive</p>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 2</h3>
+                            <p>Rédaction du guide de cybersécurité</p>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 3</h3>
+                            <p>Simulation des alertes de sécurité</p>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 4</h3>
+                            <p>Tests utilisateurs avec des lycéennes</p>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 5</h3>
+                            <p>Présentation finale et déploiement</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Ressources gratuites -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Ressources gratuites</h2>
+                    <div class="resources">
+                        <div class="resource">
+                            <i class="fas fa-tools"></i>
+                            <h3>Outils de cybersécurité</h3>
+                            <ul>
+                                <li><a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a> - Vérifier si vos données ont été compromises</li>
+                                <li><a href="https://www.virustotal.com/" target="_blank">VirusTotal</a> - Scanner des fichiers et URLs suspects</li>
+                                <li><a href="https://www.malwarebytes.com/free" target="_blank">Malwarebytes Free</a> - Antivirus gratuit</li>
+                            </ul>
+                        </div>
+                        <div class="resource">
+                            <i class="fas fa-book"></i>
+                            <h3>Guides et formations</h3>
+                            <ul>
+                                <li><a href="https://www.cybermalveillance.gouv.fr/" target="_blank">Cybermalveillance.gouv.fr</a> - Plateforme d'assistance</li>
+                                <li><a href="https://www.cnil.fr/fr/maitriser-mes-donnees" target="_blank">CNIL</a> - Protection des données personnelles</li>
+                                <li><a href="https://www.fcc.gov/smartphone-security" target="_blank">FCC Smartphone Security Checker</a> - Guide sécurité mobile</li>
+                            </ul>
+                        </div>
+                        <div class="resource">
+                            <i class="fas fa-gamepad"></i>
+                            <h3>Jeux et activités</h3>
+                            <ul>
+                                <li><a href="https://phishingquiz.withgoogle.com/" target="_blank">Google Phishing Quiz</a> - Apprenez à identifier le phishing</li>
+                                <li><a href="https://www.hackquest.com/" target="_blank">HackQuest</a> - Jeu éducatif sur la cybersécurité</li>
+                                <li><a href="https://internetsafety.trendmicro.com/" target="_blank">Trend Micro</a> - Ressources pour la sécurité en ligne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Conclusion -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Conclusion</h2>
+                    <div class="conclusion">
+                        <h3>La cybersécurité est accessible à toutes !</h3>
+                        <p>Protect My Phone vise à démystifier la cybersécurité et à rendre son apprentissage ludique et pertinent pour les lycéennes.</p>
+                        <p>Notre objectif : créer une génération de jeunes femmes conscientes des enjeux numériques et capables de se protéger efficacement.</p>
+                        <p>Ensemble, construisons un espace numérique plus sûr et plus inclusif !</p>
+                        
+                        <div class="call-to-action">
+                            <button class="action-btn"><i class="fas fa-download"></i> Télécharger la présentation</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Partager</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 15: Bibliographie -->
+            <section class="slide">
+                <div class="content">
+                    <h2>Bibliographie</h2>
+                    <div class="bibliography">
+                        <div class="ref">
+                            <span class="ref-number">[1]</span>
+                            <span class="ref-content">ANSSI (2023). "Guide d'hygiène informatique pour les particuliers". <a href="https://www.ssi.gouv.fr" target="_blank">www.ssi.gouv.fr</a></span>
+                        </div>
+                        <div class="ref">
+                            <span class="ref-number">[2]</span>
+                            <span class="ref-content">Kaspersky (2024). "Mobile Malware Evolution 2023". <a href="https://securelist.com" target="_blank">securelist.com</a></span>
+                        </div>
+                        <div class="ref">
+                            <span class="ref-number">[3]</span>
+                            <span class="ref-content">Norton (2023). "Rapport sur les cybermenaces". <a href="https://www.nortonlifelock.com" target="_blank">www.nortonlifelock.com</a></span>
+                        </div>
+                        <div class="ref">
+                            <span class="ref-number">[4]</span>
+                            <span class="ref-content">Pew Research Center (2023). "Teens, Social Media & Technology 2023". <a href="https://www.pewresearch.org" target="_blank">www.pewresearch.org</a></span>
+                        </div>
+                        <div class="ref">
+                            <span class="ref-number">[5]</span>
+                            <span class="ref-content">CNIL (2024). "La protection des données personnelles des mineurs". <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a></span>
+                        </div>
+                        <div class="ref">
+                            <span class="ref-number">[6]</span>
+                            <span class="ref-content">McAfee (2023). "Mobile Threat Report". <a href="https://www.mcafee.com" target="_blank">www.mcafee.com</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: Merci -->
+            <section class="slide thank-you">
+                <div class="content">
+                    <h2>Merci de votre attention</h2>
+                    <p>Des questions ?</p>
+                    <div class="logo-container small">
+                        <img src="images/cyber_shield_logo.png" alt="Logo Protect My Phone" class="logo">
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- English content -->
+    <div class="language-content" data-lang="en" style="display: none;">
+        <!-- English content would go here - identical structure but translated -->
+    </div>
+
+    <!-- Spanish content -->
+    <div class="language-content" data-lang="es" style="display: none;">
+        <!-- Spanish content would go here - identical structure but translated -->
+    </div>
+
+    <!-- Arabic content -->
+    <div class="language-content" data-lang="ar" style="display: none;">
+        <!-- Arabic content would go here - identical structure but translated -->
+    </div>
+
+    <audio id="screen-reader" src=""></audio>
+    <script src="script.js"></script>
+</body>
+</html>

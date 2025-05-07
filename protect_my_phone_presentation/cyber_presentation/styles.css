@@ -1,0 +1,406 @@
+/* Cybersecurity Presentation Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #2a3e8e;
+    --secondary-color: #00c6ff;
+    --accent-color: #ff5252;
+    --dark-bg: #1a1a2e;
+    --light-bg: #f5f5f5;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+.presentation {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/cyber_background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.content {
+    max-width: 1200px;
+    width: 90%;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: var(--card-shadow);
+    z-index: 1;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.logo-container.small .logo {
+    width: 100px;
+    margin-top: 2rem;
+}
+
+/* Title Slide */
+.title-slide {
+    background-color: var(--dark-bg);
+    text-align: center;
+}
+
+.title-slide .content {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 4rem;
+}
+
+.title-slide h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 4rem;
+}
+
+.title-slide h2 {
+    color: var(--secondary-color);
+    border: none;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.author {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 2rem;
+    color: var(--text-dark);
+}
+
+/* Objectives Section */
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.objective {
+    background-color: rgba(42, 62, 142, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.objective:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature {
+    background-color: rgba(0, 198, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Risks Section */
+.risks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.risk {
+    background-color: rgba(255, 82, 82, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.risk:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Best Practices Section */
+.practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.practice {
+    background-color: rgba(42, 62, 142, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.practice:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Scenarios Section */
+.scenarios {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.scenario {
+    background-color: rgba(0, 198, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.scenario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Section */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 4px;
+    background-color: var(--secondary-color);
+}
+
+.phase {
+    margin-left: 50px;
+    position: relative;
+    padding: 1rem;
+    background-color: rgba(0, 198, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.phase:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.phase::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.phase:hover::before {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 15px rgba(0, 198, 255, 0.8);
+}
+
+/* Conclusion Section */
+.conclusion {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conclusion h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.conclusion p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Thank You Slide */
+.thank-you {
+    background-color: var(--dark-bg);
+    text-align: center;
+}
+
+.thank-you .content {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.thank-you h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    border: none;
+}
+
+.thank-you p {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+/* Slide Counter */
+.slide-counter {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    z-index: 100;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content {
+        padding: 2rem;
+        width: 95%;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    p, li {
+        font-size: 1rem;
+    }
+    
+    .objectives, .features, .risks, .practices {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+}

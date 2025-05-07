@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap - Application Protect My Phone</title>
+    <style>
+        :root {
+            --primary: #4c68d7;
+            --secondary: #00c6ff;
+            --accent: #ff5252;
+            --dark: #1a1a2e;
+            --light: #f5f5f5;
+            --success: #4CAF50;
+            --warning: #FFC107;
+            --danger: #F44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        main {
+            padding: 30px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin: 15px 0;
+            font-size: 1.4rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .feature-card {
+            background-color: #f5f9ff;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .tech-card {
+            background-color: #f0f8ff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tech-logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .tech-logo span {
+            font-size: 40px;
+        }
+        
+        .tech-name {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .tech-description {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .advantages {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .advantages ul {
+            margin-left: 25px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        
+        .team-roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .role-card {
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .role-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .steps-container {
+            position: relative;
+            margin-left: 30px;
+        }
+        
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 2px;
+            background-color: var(--primary);
+        }
+        
+        .step {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+        
+        .resource-links {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .resource-links a {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        
+        .resource-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #3a54b4;
+        }
+        
+        .accent-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Roadmap - Application "Protect My Phone"</h1>
+            <p class="subtitle">Guide pour développer l'application éducative de cybersécurité</p>
+        </header>
+        
+        <main>
+            <section id="introduction">
+                <h2>🚀 Introduction</h2>
+                <p>
+                    L'application <strong>"Protect My Phone"</strong> vise à sensibiliser les jeunes filles à la cybersécurité
+                    en leur montrant comment sécuriser leur téléphone et naviguer en toute sécurité sur internet.
+                    Ce document présente la roadmap de développement pour créer une première version fonctionnelle (MVP).
+                </p>
+                <div class="accent-box">
+                    <p><strong>Objectif principal :</strong> Créer une application mobile éducative qui permet d'apprendre
+                    les bonnes pratiques de cybersécurité de manière interactive et ludique.</p>
+                </div>
+            </section>
+            
+            <section id="features">
+                <h2>🧱 Étape 1 - Fonctionnalités principales</h2>
+                
+                <div class="feature-card">
+                    <div class="feature-title">Deux modes d'utilisation</div>
+                    <p>
+                        <strong>Avec compte</strong> - Connexion via Google ou email pour sauvegarder les progrès et paramètres personnalisés<br>
+                        <strong>Sans compte</strong> - Utilisation anonyme pour une expérience rapide sans inscription
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title">Détection des risques</div>
+                    <p>
+                        <strong>Analyse des permissions</strong> - Vérification des permissions sensibles des applications (caméra, micro, localisation, etc.)<br>
+                        <strong>Vérification des liens</strong> - Détection des liens non sécurisés (HTTP) et potentiellement frauduleux<br>
+                        <strong>Évaluation du niveau de sécurité</strong> - Score global de la sécurité du téléphone avec recommandations
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title">Guide de sécurité interactif</div>
+                    <p>
+                        <strong>Tutoriels</strong> - Guides pas à pas pour sécuriser son téléphone<br>
+                        <strong>Quiz et défis</strong> - Activités ludiques pour tester ses connaissances<br>
+                        <strong>Ressources</strong> - Documentation et conseils adaptés aux jeunes
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-title">Mode parent</div>
+                    <p>
+                        <strong>Supervision</strong> - Contrôle des activités de l'enfant sur l'application<br>
+                        <strong>Notifications</strong> - Alertes en cas de comportements à risque<br>
+                        <strong>Rapports</strong> - Synthèse des apprentissages et recommandations
+                    </p>
+                </div>
+            </section>
+            
+            <section id="technology">
+                <h2>🧠 Étape 2 - Choix de la technologie</h2>
+                
+                <div class="tech-card">
+                    <div class="tech-logo">
+                        <span>🎯</span>
+                    </div>
+                    <div class="tech-name">Flutter</div>
+                    <div class="tech-description">
+                        Framework de développement cross-platform créé par Google
+                    </div>
+                    
+                    <div class="advantages">
+                        <h4>Pourquoi choisir Flutter ?</h4>
+                        <ul>
+                            <li><strong>Cross-platform</strong> - Une seule base de code pour Android et iOS</li>
+                            <li><strong>Facile à apprendre</strong> - Courbe d'apprentissage douce pour les débutants</li>
+                            <li><strong>Grande communauté</strong> - Documentation complète et support actif</li>
+                            <li><strong>Interface utilisateur</strong> - Design personnalisable et animations fluides</li>
+                            <li><strong>Hot Reload</strong> - Visualisation instantanée des changements de code</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Langages et technologies</h3>
+                <p>
+                    <strong>Dart</strong> - Langage de programmation principal utilisé par Flutter<br>
+                    <strong>Firebase</strong> - Plateforme de développement d'applications qui fournit des services comme l'authentification et la base de données<br>
+                    <strong>Figma/Adobe XD</strong> - Pour la conception des interfaces utilisateur<br>
+                    <strong>Git</strong> - Pour la gestion de versions et la collaboration
+                </p>
+            </section>
+            
+            <section id="roadmap">
+                <h2>🗺️ Étape 3 - Roadmap simplifiée</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Étape</th>
+                            <th>Objectif</th>
+                            <th>Technologies</th>
+                            <th>Durée estimée</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Maquette de l'application</td>
+                            <td>Figma ou Canva</td>
+                            <td>1 semaine</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Création de l'interface de base</td>
+                            <td>Flutter (UI widgets)</td>
+                            <td>2-3 semaines</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Simulation de scan d'apps et permissions</td>
+                            <td>Flutter + données simulées</td>
+                            <td>1 semaine</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Création du guide de sécurité</td>
+                            <td>Contenu text/image dans Flutter</td>
+                            <td>1 semaine</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mode parent et alertes (simulés)</td>
+                            <td>Flutter + Firebase (optionnel)</td>
+                            <td>2 semaines</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Détail des étapes</h3>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <h4>Étape 1: Maquette de l'application</h4>
+                        <p>
+                            Création des wireframes et maquettes haute-fidélité pour visualiser l'interface utilisateur.
+                            Définition des flux de navigation et des interactions principales.
+                        </p>
+                        <p>
+                            <strong>Livrables:</strong> Wireframes, maquettes finales, guide de style (couleurs, polices, etc.)
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>Étape 2: Création de l'interface de base</h4>
+                        <p>
+                            Développement de l'architecture de l'application et des écrans principaux.
+                            Mise en place de la navigation entre les différentes sections.
+                        </p>
+                        <p>
+                            <strong>Livrables:</strong> Application avec écrans principaux fonctionnels, navigation entre écrans
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>Étape 3: Simulation de scan d'apps et permissions</h4>
+                        <p>
+                            Création de l'interface de scan et d'analyse des applications.
+                            Intégration de données simulées pour montrer les permissions des applications.
+                        </p>
+                        <p>
+                            <strong>Livrables:</strong> Fonctionnalité de scan simulé, visualisation des permissions
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>Étape 4: Création du guide de sécurité</h4>
+                        <p>
+                            Développement du contenu éducatif sur la cybersécurité.
+                            Implémentation de tutoriels interactifs et de quiz.
+                        </p>
+                        <p>
+                            <strong>Livrables:</strong> Guide de sécurité complet, quiz et activités interactives
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>Étape 5: Mode parent et alertes</h4>
+                        <p>
+                            Création de l'interface du mode parent.
+                            Implémentation des notifications et alertes simulées.
+                        </p>
+                        <p>
+                            <strong>Livrables:</strong> Interface parent fonctionnelle, système d'alertes
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="teamwork">
+                <h2>👥 Organisation du travail en équipe</h2>
+                
+                <p>
+                    Pour développer efficacement cette application, vous pouvez vous organiser en plusieurs équipes 
+                    avec des rôles complémentaires.
+                </p>
+                
+                <div class="team-roles">
+                    <div class="role-card">
+                        <div class="role-title">Équipe UI/UX</div>
+                        <p>
+                            Responsable de la conception des interfaces utilisateur et de l'expérience globale.
+                        </p>
+                        <ul>
+                            <li>Création des wireframes</li>
+                            <li>Design des écrans</li>
+                            <li>Tests d'utilisabilité</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="role-card">
+                        <div class="role-title">Équipe Contenu</div>
+                        <p>
+                            Chargée de créer le contenu éducatif sur la cybersécurité.
+                        </p>
+                        <ul>
+                            <li>Recherche sur les bonnes pratiques</li>
+                            <li>Rédaction des tutoriels</li>
+                            <li>Création des quiz et activités</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="role-card">
+                        <div class="role-title">Équipe Développement</div>
+                        <p>
+                            Responsable de la programmation de l'application.
+                        </p>
+                        <ul>
+                            <li>Développement des fonctionnalités</li>
+                            <li>Intégration des écrans</li>
+                            <li>Gestion des données</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="role-card">
+                        <div class="role-title">Équipe Test</div>
+                        <p>
+                            Chargée de vérifier le bon fonctionnement de l'application.
+                        </p>
+                        <ul>
+                            <li>Tests fonctionnels</li>
+                            <li>Identification des bugs</li>
+                            <li>Feedback sur l'expérience utilisateur</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Outils de collaboration</h3>
+                <p>
+                    Pour faciliter le travail en équipe, vous pouvez utiliser les outils suivants:
+                </p>
+                <ul>
+                    <li><strong>Trello/Notion</strong> - Pour la gestion des tâches et le suivi du projet</li>
+                    <li><strong>GitHub</strong> - Pour le partage et la gestion du code source</li>
+                    <li><strong>Figma/Adobe XD</strong> - Pour collaborer sur les designs</li>
+                    <li><strong>Google Drive</strong> - Pour partager les documents et ressources</li>
+                    <li><strong>Discord/Slack</strong> - Pour la communication d'équipe</li>
+                </ul>
+            </section>
+            
+            <section id="getting-started">
+                <h2>🚀 Premiers pas avec Flutter</h2>
+                
+                <p>
+                    Flutter est accessible aux débutants et offre de nombreuses ressources pour apprendre.
+                    Voici comment commencer à l'utiliser:
+                </p>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <h4>1. Découvrir Flutter avec DartPad</h4>
+                        <p>
+                            DartPad est un environnement en ligne qui permet de tester Flutter sans installation.
+                            C'est parfait pour débuter et expérimenter!
+                        </p>
+                        <p>
+                            <a href="https://dartpad.dev/?id=e7076b40fb17a0fa899f9f7a154a02e1" target="_blank" class="btn">Essayer Flutter sur DartPad</a>
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>2. Installer Flutter</h4>
+                        <p>
+                            Pour développer des applications complètes, vous devrez installer Flutter sur votre ordinateur.
+                        </p>
+                        <p>
+                            <a href="https://flutter.dev/docs/get-started/install" target="_blank" class="btn">Guide d'installation</a>
+                        </p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>3. Suivre le tutoriel de base</h4>
+                        <p>
+                            Flutter propose un excellent tutoriel pour créer votre première application.
+                        </p>
+                        <p>
+                            <a href="https://flutter.dev/docs/get-started/codelab" target="_blank" class="btn">Tutoriel de base</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <h3>Ressources d'apprentissage</h3>
+                <div class="resource-links">
+                    <a href="https://flutter.dev/docs" target="_blank">📚 Documentation officielle Flutter</a>
+                    <a href="https://www.youtube.com/channel/UCwXdFgeE9KYzlDdR7TG9cMw" target="_blank">🎬 Chaîne YouTube Flutter</a>
+                    <a href="https://www.udemy.com/course/flutter-bootcamp-with-dart/" target="_blank">🎓 Cours complet Flutter sur Udemy</a>
+                    <a href="https://pub.dev/" target="_blank">🧩 Bibliothèque de packages Flutter</a>
+                    <a href="https://flutterflow.io/" target="_blank">🛠️ FlutterFlow - Outil de création visuelle</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Créé pour le projet "Protect My Phone" - Guide de développement pour les lycéennes</p>
+        </footer>
+    </div>
+</body>
+</html>
