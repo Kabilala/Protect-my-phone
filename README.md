@@ -1,13 +1,12 @@
 # Protect-my-phone
-Protect My Phone
+Protect My Phone : https://kabilala.github.io/Protect-my-phone/
 Ce dépôt contient les ressources du projet "Protect My Phone", une application éducative sur la cybersécurité mobile pour les lycéennes.
-
 Contenu
 Le dépôt est organisé en trois sections principales :
 
-Présentation de base (/presentation) - Une présentation interactive présentant les fondamentaux de la cybersécurité mobile
-Version interactive (/enhanced) - Une version enrichie avec des éléments interactifs et des options d'accessibilité
-Roadmap technique (/roadmap) - Un guide détaillant la roadmap de développement de l'application
+Présentation de base--- - Une présentation interactive présentant les fondamentaux de la cybersécurité mobile
+Version interactive ----- Une version enrichie avec des éléments interactifs et des options d'accessibilité
+Roadmap technique ----- - Un guide détaillant la roadmap de développement de l'application
 Comment utiliser ces ressources
 Les trois présentations sont complémentaires et peuvent être utilisées à différentes étapes du projet :
 
